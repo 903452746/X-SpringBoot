@@ -68,7 +68,22 @@ public class ShiroConfig {
         filterMap.put("/mobile/login/**", "anon"); //手机短信登录
         filterMap.put("/v2/**", "anon");
         filterMap.put("/", "anon");
+        //静态资源
+        filterMap.put("/*.ico", "anon");
+        filterMap.put("/*.html", "anon");
+        filterMap.put("/css/**", "anon");
+        filterMap.put("/fonts/**", "anon");
+        filterMap.put("/js/**", "anon");
+        filterMap.put("/libs/**", "anon");
+        filterMap.put("/modules/**", "anon");
+        filterMap.put("/plugins/**", "anon");
+        filterMap.put("/swagger/**", "anon");
+
         filterMap.put("/**", "oauth2");
+
+
+
+
         shiroFilter.setFilterChainDefinitionMap(filterMap);
 
         return shiroFilter;

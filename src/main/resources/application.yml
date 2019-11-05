@@ -10,14 +10,25 @@ spring:
     jackson:
         time-zone: GMT+8
         date-format: yyyy-MM-dd HH:mm:ss
-    redis:
-        host: localhost
-        port: 6379
-        password:       # 密码（默认为空）
+    #redis:
+        #host: localhost
+        #port: 6379
+        #password:       # 密码（默认为空）
     servlet:
         multipart:
             maxFileSize: 104857600 #100MB
-            maxRequestSize: 104857600 #100MB
+            maxRequestSize: 104857600 #100M
+    thymeleaf:
+      #模板的模式，支持 HTML, XML TEXT JAVASCRIPT
+      #mode: LEGACYHTML5
+      #编码 可不用配置
+      encoding: UTF-8
+      #开发配置为false,避免修改模板还要重启服务器
+      cache: false
+      #配置模板路径，默认是templates，可以不用配置
+      prefix: classpath:/public/
+      #在构建URL时附加到视图名称的后缀。
+      suffix: .html
 
 # 暴露监控端点后会打印所有的端点
 management:
