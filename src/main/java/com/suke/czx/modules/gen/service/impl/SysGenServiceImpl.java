@@ -29,6 +29,7 @@ public class SysGenServiceImpl extends ServiceImpl<SysGenMapper,InfoRmationSchem
         return sysGenMapper.queryTableList(page,entityWrapper);
     }
 
+    @Override
     public byte[] generatorCode(GenConfig config) {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         ZipOutputStream zip = new ZipOutputStream(outputStream);
