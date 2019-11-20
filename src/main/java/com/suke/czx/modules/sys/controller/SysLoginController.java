@@ -29,7 +29,6 @@ import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -55,11 +54,6 @@ public class SysLoginController extends AbstractController {
     private ShiroUtils shiroUtils;
 
     private Map<String, String> caotchaCache = new LRUMap(1000);
-
-    @RequestMapping("/")
-    public R hello() {
-        return R.ok("hello welcome to use x-springboot");
-    }
 
     /**
      * 验证码
